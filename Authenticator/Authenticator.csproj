@@ -52,6 +52,7 @@
 	  <None Remove="Resources\Fonts\BrandRegularFA.otf" />
 	  <None Remove="Resources\Fonts\RegularFA.otf" />
 	  <None Remove="Resources\Fonts\SolidFA.otf" />
+	  <None Remove="Resources\Images\password_image.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -65,6 +66,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Home\AccountDetailsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\PasswordsPage.xaml">

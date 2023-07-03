@@ -1,4 +1,5 @@
 ﻿using Authenticator.Models;
+using Authenticator.Views.Home;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System;
@@ -12,40 +13,50 @@ namespace Authenticator.ViewModels
     public partial class HomeViewModel:ObservableObject
     {
         [ObservableProperty]
-        private List<PasswordModel> _accountsData;
+        private List<AccountModel> _accountsData;
+
+        [ObservableProperty]
+        private AccountModel _selctedAccount;
 
 
 
         [RelayCommand]
-        private async Task GetInitialData()
+        private void GetInitialData()
         {
-            AccountsData = new List<PasswordModel>
+            AccountsData = new List<AccountModel>
             {
-                new PasswordModel()
+                new AccountModel()
                 {
                     Id = 1,
                     Email = "email1@gmail.com",
                     OrganizationName = "Organization 1"
                 },
-                new PasswordModel()
+                new AccountModel()
                 {
                     Id = 2,
                     Email = "email2@gmail.com",
                     OrganizationName = "Organization 2"
                 },
-                new PasswordModel()
+                new AccountModel()
                 {
                     Id = 3,
                     Email = "email3@gmail.com",
                     OrganizationName = "Organization 3"
                 },
-                new PasswordModel()
+                new AccountModel()
                 {
                     Id = 4,
                     Email = "email4@gmail.com",
                     OrganizationName = "Organization 4"
                 },
             };
+        }
+
+
+        [RelayCommand]
+        private async Task ViewAccountDetails(AccountModel selectedAccount)
+        {
+            await Shell.Current.GoToAsync($"{nameof(AccountDetailsPage)}?accountIdParam={selectedAccount.Id}");
         }
 
     }

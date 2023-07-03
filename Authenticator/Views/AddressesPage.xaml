@@ -2,11 +2,96 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Authenticator.Views.AddressesPage"
-             Title="AddressesPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="AddressesPage"
+             Shell.NavBarIsVisible="False"
+             xmlns:fontawesome="clr-namespace:FontAwesome">
+
+    <!--Layout-->
+    <Grid RowDefinitions=".07*,.1*,*">
+        <!--Upper navbar-->
+        <StackLayout BackgroundColor="{StaticResource myBlue}"
+                     Grid.ColumnSpan="4"
+                     Orientation="Horizontal"
+                     Grid.Row="0"
+                     >
+            <Label  TextColor="{StaticResource myWhite}"
+                    Text="Addresses"
+                    FontSize="24"
+                    Margin="15,0,0,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="StartAndExpand"/>
+
+            <Label  TextColor="{StaticResource myWhite}"
+                    Text="{x:Static fontawesome:FontAwesomeIcons.EllipsisV}"
+                    FontSize="24"
+                    Margin="0,0,15,0"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="EndAndExpand"
+                    FontFamily="FAS"/>
+        </StackLayout>
+
+        <!--Body-->
+        <StackLayout Grid.Row="1"
+                     VerticalOptions="Center"
+                     HorizontalOptions="CenterAndExpand">
+            <Image Source="password.svg"
+                   Margin="40,120,40,0"
+                   WidthRequest="300"
+                   HeightRequest="170"/>
+
+            <Label Text="Auto fill passwords and more.."
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="19"
+                   Margin="0,20,0,0"
+                   FontAttributes="Bold"
+                   TextColor="Black"/>
+
+            <Label Text="Passwords and other data you save in"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="15"
+                   Margin="20,10,20,0"
+                   LineBreakMode="WordWrap" 
+                   TextColor="{StaticResource myBlack}"/>
+            <Label Text="Authenticator will bestored securely in your"
+                   HorizontalOptions="CenterAndExpand"
+                  FontSize="15"
+                   Margin="20,0,20,0"
+                   LineBreakMode="WordWrap" 
+                   TextColor="{StaticResource myBlack}"/>
+            <Label Text=" Microsoft account and  synced across all your "
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="15"
+                   Margin="20,0,20,0"
+                   LineBreakMode="WordWrap" 
+                   TextColor="{StaticResource myBlack}"/>
+
+            <Label Text="signed  in devices"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="15"
+                   Margin="20,0,20,0"
+                   LineBreakMode="WordWrap" 
+                   TextColor="{StaticResource myBlack}"/>
+
+
+            <Frame BackgroundColor="{StaticResource myBlue}"
+                   BorderColor="{StaticResource myBlue}"
+                   CornerRadius="10"
+                   Margin="20,20,20,0"
+                   Padding="8">
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Label Text="{Static fontawesome:FontAwesomeIcons.Microsoft}"
+                           FontSize="27"
+                           FontFamily="FAB"
+                           TextColor="White"/>
+                    <Label Text="Sign With Mocrosoft"
+                           FontSize="17"
+                           Margin="20,0,0,0"
+                           TextColor="White"/>
+
+                </HorizontalStackLayout>
+
+            </Frame>
+        </StackLayout>
+    </Grid>
+
 </ContentPage>

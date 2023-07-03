@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Authenticator.Models
 {
-    public class PasswordModel
+    public class AccountModel
     {
         public int Id { get; set; } = 0;
         public string Email { get; set; } = "";

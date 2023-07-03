@@ -27,7 +27,7 @@
             <Tab.Icon>
                 <FontImageSource FontFamily="FAS" Glyph="{x:Static fontawesome:FontAwesomeIcons.CreditCard}" />
             </Tab.Icon>
-            <ShellContent  Route="PasswordsPage" ContentTemplate="{DataTemplate home:AddressesPage}"/>
+            <ShellContent  Route="PasswordsPage" ContentTemplate="{DataTemplate home:PaymentsPage}"/>
         </Tab>
 
         <Tab Title="Addresses" >
@@ -41,7 +41,7 @@
             <Tab.Icon>
                 <FontImageSource FontFamily="FAS" Glyph="{x:Static fontawesome:FontAwesomeIcons.AddressCard}" />
             </Tab.Icon>
-            <ShellContent  Route="PasswordsPage" ContentTemplate="{DataTemplate home:AddressesPage}"/>
+            <ShellContent  Route="PasswordsPage" ContentTemplate="{DataTemplate home:VarifiedIdsPage}"/>
         </Tab>
 
 
