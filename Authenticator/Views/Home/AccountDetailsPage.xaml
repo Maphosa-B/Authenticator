@@ -7,7 +7,7 @@
              BackgroundColor="{StaticResource myCreamWhite}">
 
 
-    <Grid RowDefinitions=".07*,.1*,*">
+    <Grid RowDefinitions=".07*,.2*,*">
 
         <!--Upper navbar-->
         <StackLayout BackgroundColor="{StaticResource myBlue}"
@@ -31,6 +31,93 @@
                     HorizontalOptions="EndAndExpand"
                     FontFamily="FAS"/>
         </StackLayout>
+
+        <!---Profile details section-->
+        <StackLayout Grid.Row="1"
+                     BackgroundColor="{StaticResource myBlue}"
+                     Orientation="Horizontal">
+            <Frame CornerRadius="50"
+                   HeightRequest="90"
+                   WidthRequest="90"
+                   HorizontalOptions="Start"
+                   VerticalOptions="CenterAndExpand"
+                   Margin="10,0,0,0"
+                   Padding="0"
+                   BackgroundColor="{StaticResource myCreamWhite}"
+                   BorderColor="{StaticResource myCreamWhite}">
+                <Label Text="{Static fontawesome:FontAwesomeIcons.User}"
+                       FontFamily="FAS"
+                       FontSize="60"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" 
+                       TextColor="{StaticResource myBlack}"/>
+
+            </Frame>
+
+            <VerticalStackLayout VerticalOptions="Center">
+                <Label Text="Organization 1"
+                       FontSize="30"
+                       Margin="20,0,0,0"
+                       TextColor="{StaticResource myCreamWhite}"/>
+
+                <Label Text="testemail.gmail.com"
+                       FontSize="20"
+                       Margin="20,0,0,0"
+                       TextColor="{StaticResource myCreamWhite}"/>
+
+            </VerticalStackLayout>
+        </StackLayout>
+        
+        <Grid Grid.Row="2"
+              ColumnDefinitions=".2*,*,.2*"
+              Padding="15,20,15,0"
+              BackgroundColor="White">
+            
+            
+            
+            <Frame HeightRequest="35"
+                   WidthRequest="35"
+                   CornerRadius="50"
+                   Margin="0,20"
+                   Padding="0"
+                   VerticalOptions="Start"
+                   BackgroundColor="{StaticResource myCreamWhite}"
+                   BorderColor="{StaticResource myBlack}"
+                   >
+                <StackLayout>
+                    
+                    <Label Text="60"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           FontSize="15"
+                           TextColor="{StaticResource myBlue}"/>
+                </StackLayout>
+                
+            </Frame>
+
+            <StackLayout Grid.Column="1"
+                         Margin="15,0,0,0">
+
+                <Label Text="One-Time Password Code"
+                       FontSize="20"/>
+
+                <Label Text="2439 6151"
+                       FontSize="40"
+                       TextColor="{StaticResource myBlue}"
+                       FontAttributes="Bold"/>
+               
+                <BoxView BackgroundColor="{StaticResource myBlack}"
+                         WidthRequest="500"
+                         Grid.Column="1"
+                         HeightRequest="1"
+                         Margin="200,5,0,0"
+                         HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            
+
+        </Grid>
+      
+        
         
         
     </Grid>
